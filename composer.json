@@ -1,0 +1,29 @@
+{
+  "name": "webonyx/php-fernet",
+  "description": "An implementation of the Fernet token specification in PHP.",
+  "homepage": "https://github.com/webonyx/php-fernet",
+  "authors": [
+    {
+      "name": "Viet Pham",
+      "email": "viet@webonyx.com",
+      "role": "Developer"
+    }
+  ],
+  "license": "BSD-3-Clause",
+  "require": {
+    "php": ">=5.6.0",
+    "ext-hash": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Fernet\\": "src"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": " 4.*"
+  },
+  "suggest": {
+    "ext-mcrypt": "This package requires either the mcrypt or openssl extension.",
+    "ext-openssl": "This package requires either the mcrypt or openssl extension."
+  }
+}
