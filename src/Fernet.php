@@ -59,7 +59,7 @@ class Fernet
     public function encode($message)
     {
         if (!is_string($message)) {
-            throw new \Exception("'message' must be a string");
+            throw new TypeException("'message' type must be string");
         }
 
         $iv = $this->getIV();
@@ -95,7 +95,7 @@ class Fernet
     public function decode($token, $ttl = null)
     {
         if (!is_string($token)) {
-            throw new InvalidTokenException('Token must be string');
+            throw new TypeException("'message' type must be string");
         }
 
         $raw = self::urlsafeB64Decode($token);

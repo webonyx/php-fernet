@@ -80,7 +80,7 @@ class FernetSpecTest extends PHPUnit_Framework_TestCase
 
     function testInvalid()
     {
-        $this->setExpectedException('Fernet\Exception');
+        $this->setExpectedException('Fernet\InvalidTokenException');
         $tests = json_decode(file_get_contents(__DIR__ . '/spec/invalid.json'));
         foreach ($tests as $test) {
             $time = strtotime($test->now);

@@ -24,6 +24,7 @@
   },
   "suggest": {
     "ext-mcrypt": "This package requires either the mcrypt or openssl extension.",
-    "ext-openssl": "This package requires either the mcrypt or openssl extension."
+    "ext-openssl": "This package requires either the mcrypt or openssl extension.",
+    "ext-msgpack": "msgpack pecl extension is required to use FernetMsgpack wrapper."
   }
 }

@@ -3,10 +3,10 @@
 Fernet-PHP implementation of the [Fernet token specification](https://github.com/fernet/spec/blob/master/Spec.md)
 in PHP. This is a fork of Kelvinmo implementation at [fernet-php](https://github.com/kelvinmo/fernet-php) with some improvements:
 
-- Drop support old PHP versions
+- Drop supporting old PHP versions
 - Exception base for error handling
 - Support `msgpack` wrapper to reduce token size
-- Key rotation (TBD)
+- _Key rotation (TBD)_
 
 
 ## Requirements
@@ -38,7 +38,7 @@ use Fernet\Fernet;
 use Fernet\InvalidTokenException;
 
 $key = '[Base64url encoded fernet key]'; // or $key = Fernet::generateKey();
-$fernet = new Fernet($key);
+$fernet = new Fernet($key); // or new FernetMsgpack($key);
 
 $token = $fernet->encode('string message');
 
